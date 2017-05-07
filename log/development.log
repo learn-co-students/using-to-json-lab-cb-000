@@ -765,3 +765,73 @@ Processing by ProductsController#inventory as */*
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 69.245.10.143 at 2017-05-07 16:21:22 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 3668ms (Views: 3650.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.245.10.143 at 2017-05-07 16:21:26 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.245.10.143 at 2017-05-07 16:21:26 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.245.10.143 at 2017-05-07 16:21:26 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.245.10.143 at 2017-05-07 16:21:26 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/products/1" for 69.245.10.143 at 2017-05-07 16:21:31 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1.json" for 69.245.10.143 at 2017-05-07 16:21:36 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.1ms)
+
+ActionView::MissingTemplate (Missing template products/{"id":1,"name":"My Product","price":3,"created_at":"2016-02-21T04:54:02.005Z","updated_at":"2016-02-21T04:54:02.005Z","inventory":2,"description":"lorem oh this is cool lorem lorem yadda yadda yadda lorem"}, application/{"id":1,"name":"My Product","price":3,"created_at":"2016-02-21T04:54:02.005Z","updated_at":"2016-02-21T04:54:02.005Z","inventory":2,"description":"lorem oh this is cool lorem lorem yadda yadda yadda lorem"} with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ezirens-40806/code/labs/using-to-json-lab-cb-000/app/views"
+):
+  app/controllers/products_controller.rb:28:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (25.2ms)
+
+
+Started GET "/products/1.json" for 69.245.10.143 at 2017-05-07 16:22:45 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1.json" for 69.245.10.143 at 2017-05-07 16:23:26 +0000
+Cannot render console from 69.245.10.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.8ms)
