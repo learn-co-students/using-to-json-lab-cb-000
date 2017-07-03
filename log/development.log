@@ -765,3 +765,328 @@ Processing by ProductsController#inventory as */*
   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 11:34:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 19ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:40:47 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1067ms (Views: 1039.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-07-03 11:40:48 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-07-03 11:40:48 -0400
+
+
+Started GET "/assets/store_admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-07-03 11:40:48 -0400
+
+
+Started GET "/assets/store_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-07-03 11:40:48 -0400
+
+
+Started GET "/products/1.json" for 127.0.0.1 at 2017-07-03 11:40:54 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `author' for #<Product:0x0055b9f314b088>):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.1ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.5ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-07-03 11:42:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 300ms (Views: 283.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1/description" for 127.0.0.1 at 2017-07-03 11:42:20 -0400
+Processing by ProductsController#description as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/inventory" for 127.0.0.1 at 2017-07-03 11:42:20 -0400
+Processing by ProductsController#inventory as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.1ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:42:23 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2/data" for 127.0.0.1 at 2017-07-03 11:42:27 -0400
+Processing by ProductsController#data as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1.json" for 127.0.0.1 at 2017-07-03 11:42:31 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `author' for #<Product:0x007fea768695d0>):
+  app/controllers/products_controller.rb:29:in `block (2 levels) in show'
+  app/controllers/products_controller.rb:27:in `show'
+
+
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.7ms)
+
+
+Started GET "/products/1.json" for 127.0.0.1 at 2017-07-03 11:42:59 -0400
+
+SyntaxError (/home/joel/Dev/labs/rails_js/using-to-json-lab-cb-000/app/controllers/products_controller.rb:30: syntax error, unexpected keyword_end, expecting '}'
+/home/joel/Dev/labs/rails_js/using-to-json-lab-cb-000/app/controllers/products_controller.rb:43: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/products_controller.rb:30: syntax error, unexpected keyword_end, expecting '}'
+  app/controllers/products_controller.rb:43: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started GET "/products/1.json" for 127.0.0.1 at 2017-07-03 11:43:12 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/1.json" for 127.0.0.1 at 2017-07-03 11:43:14 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:47:41 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2017-07-03 11:47:42 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:47:46 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2017-07-03 11:47:47 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:47:54 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2017-07-03 11:47:56 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:48:20 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24728ms (Views: 20.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:50:58 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 34ms (Views: 22.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:50:59 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:50:59 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:51:01 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:51:02 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 37.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:51:02 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2017-07-03 11:51:04 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2017-07-03 11:55:44 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2.json" for 127.0.0.1 at 2017-07-03 11:55:45 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/3.json" for 127.0.0.1 at 2017-07-03 11:55:46 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 3]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=3):
+  app/controllers/products_controller.rb:26:in `show'
+
+
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (13.9ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.0ms)
+
+
+Started GET "/products/3.json" for 127.0.0.1 at 2017-07-03 11:55:48 -0400
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=3):
+  app/controllers/products_controller.rb:26:in `show'
+
+
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (13.7ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/joel/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.8ms)
+  [1m[36mProduct Load (1.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "products"
