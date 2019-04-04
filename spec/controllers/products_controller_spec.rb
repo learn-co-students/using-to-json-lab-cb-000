@@ -46,5 +46,4 @@ RSpec.describe ProductsController, type: :controller do
       expect(body["created_at"]).to eq nil
     end
   end
-
 end
